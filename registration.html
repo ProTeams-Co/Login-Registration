@@ -1,0 +1,72 @@
+<!-- Code By Abdallah Emad - 2025 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+    
+    <!-- Title -->
+    <title>Registration Page | Code With Abdallah</title>
+</head>
+<body>
+    <!-- Registration Form -->
+    <div class="container">
+        <div class="logo">
+            <img src="images/logo.png" alt="">
+        </div>
+
+        <div class="title-page">
+            <h2>إنشاء حساب جديد</h2>
+        </div>
+
+        <form action="">
+            <label for="user_name">أسم المتسخدم</label>
+            <div class="form-input">
+                <input type="text" name="username" id="user_name" placeholder="أدخل أسم المتسخدم" required>
+            </div>
+
+            <label for="email">البريد الألكتروني</label>
+            <div class="form-input">
+                <input type="email" name="email" id="email" placeholder="أدخل البريد الألكتروني" required>
+            </div>
+
+            <label for="password">كلمة المرور</label>
+            <div class="form-input password-input">
+                <input type="password" name="password" id="password" placeholder="أدخل كلمة المرور" required>
+                <div class="icon-toggle-password">
+                    <button type="button" id="toggle-password" class="toggle-password">
+                        <img src="images/eyeOn.svg" alt="">
+                    </button>
+                </div>
+            </div>
+
+            <label for="confirm_password">تأكيد كلمة المرور</label>
+            <div class="form-input password-input">
+                <input type="password" name="confirm_password" id="confirm_password" placeholder="أدخل تأكيد كلمة المرور" required>
+                <div class="icon-toggle-password">
+                    <button type="button" id="toggle-confirm-password" class="toggle-password">
+                        <img src="images/eyeOn.svg" alt="">
+                    </button>
+                </div>
+            </div>
+
+            <div class="form-button">
+                <button type="submit" class="login-btn">أشترك الأن</button>
+            </div>
+        </form>
+
+        <div class="divider">
+            <span>لدي حساب بالفعل</span>
+        </div>
+
+        <div class="link create-account">
+            <a href="login.html">سجل دخولك</a>
+        </div>
+    </div>
+</body>
+</html>

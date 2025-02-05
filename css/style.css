@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+
+/* CSS Variables */
+:root {
+    --primary-color: #1a73e8;
+    --secondary-color: #26bbffb3;
+    --backgroud-color: #f5f5f5;
+    --text-color: #333;
+    --white-color: #fff;
+    --border-color: #ccc;
+    --sb-thumb-color: var(--primary-color);
+    --sb-track-color: #353535;
+    --font-family: "Cairo", serif;
+    --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s;
+    --sb-size: 10px;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: var(--font-family);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    direction: rtl;
+    text-align: right;
+    background-color: var(--backgroud-color);
+    color: var(--text-color);
+}
+
+/* Scrollbar Styles */
+body::-webkit-scrollbar {
+    width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 1px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 1px;
+    
+}
+
+@supports not selector(::-webkit-scrollbar) {
+    body {
+        scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    }
+}
+
+/* Container Styles */
+.container {
+    width: 500px;
+    padding: 30px;
+    border-radius: 12px;
+    background-color: var(--white-color);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+}
+
+.container .logo img {
+    width: 90px;
+}
+
+.container .title-page {
+    margin-bottom: 20px;
+}
+
+.container .title-page h2 {
+    font-size: 2rem;
+    color: var(--text-color);
+    font-weight: 800;
+}
+
+/* Form Styles */
+.container form {
+    text-align: right;
+}
+
+.container form label {
+    font-size: 1.1rem;
+    display: block;
+    margin: 10px 0 5px;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.container form .form-input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.container form .form-input input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--white-color);
+    color: var(--text-color);
+}
+
+.container form .password-input {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+}
+
+.container form .password-input .icon-toggle-password {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 3.5px;
+    left: 0;
+    background-color: var(--white-color);
+    margin-left: 8px;
+    padding-inline-end: 10px;
+    padding-right: 10px;
+}
+
+form .password-input .icon-toggle-password .toggle-password {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    padding: 8px;
+    background: transparent;
+    cursor: pointer;
+    border: none;
+}
+
+.container form .forgot-password a {
+    display: block;
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+/* Button Styles */
+.container form .form-button {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.container form .form-button button {
+    width: 100%;
+    padding: 13px;
+    font-size: 1.2rem;
+    background-color: var(--secondary-color);
+    font-weight: 700;
+    color: #010f16;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.container form .form-button button:hover {
+    background-color: #26bbff;
+}
+
+/* Divider Styles */
+.container .divider {
+    position: relative;
+    text-align: center;
+}
+
+.container .divider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--border-color);
+    z-index: 0;
+}
+
+.container .divider span {
+    background-color: var(--white-color);
+    color: var(--text-color);
+    padding: 0 10px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Link Styles */
+.container .link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container .link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .container .logo img {
+        width: 70px;
+    }
+
+    .container .title-page h2 {
+        font-size: 1.5rem;
+    }
+
+    .container form label {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 12px;
+    }
+
+    .container .title-page {
+        margin-bottom: 10px;
+    }
+
+    .container .title-page h2 {
+        font-size: 1.1rem;
+    }
+
+    .container form label {
+        font-size: 0.9rem;
+    }
+
+    .container form .form-input input {
+        padding: 8px;
+    }
+
+    form .password-input .icon-toggle-password {
+        top: 5px;
+    }
+
+    form .password-input .icon-toggle-password .toggle-password {
+        padding: 5px;
+    }
+
+    .container form .form-button {
+        margin: 17px 0;
+    }
+
+    .container form .form-button button {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .container .link {
+        margin-top: 15px;
+    }
+}
