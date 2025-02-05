@@ -2,7 +2,7 @@
 
 ### 🚀 Introduction
 Welcome to the **Login & Registration Project**!  
-This project was developed by **Engineer Abdullah Emad** 🎉 to create a sleek and user-friendly login and registration system.
+This project was developed by **Engineer Abdallah Emad** 🎉 to create a sleek and user-friendly login and registration system.
 
 ---
 
@@ -30,7 +30,7 @@ This project was developed by **Engineer Abdullah Emad** 🎉 to create a sleek 
 
 ### 👨‍💻 Developer
 This project was passionately developed by:  
-**Engineer Abdullah Emad** ✨
+**Engineer Abdallah Emad** ✨
 
 ---
 
